@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "IRANSansX";
+        src: url("./assets/Font/IRANSansX-Regular.woff2") format("woff2"),
+            local("IRANSansX-Regular"), local("iranSansX-Regular"),
+            local("IranSansX-Regular"), local("IRANSANSX"), local("iransansx"),
+            local("IranSansX-regular");
+        font-style: normal;
+    }
+}
+
+@layer components {
+    .primaryTransition {
+        transition: all ease 250ms;
+    }
+}
+
+body {
+    font-family: "IRANSansX";
+    font-size: 16px;
+    color: #ffffff;
+}
