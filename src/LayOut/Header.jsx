@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryBox from "./CategoryBox.jsx";
+import CategoryBox from "../Components/CategoryBox.jsx";
 import { Link } from "react-router-dom";
 
 import { CiSearch } from "react-icons/ci";

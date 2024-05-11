@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Header.jsx";
+import Header from "../LayOut/Header.jsx";
 
 const KidsAndTeensProductsPage = () => {
     return (
