@@ -40,7 +40,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/kids_and_teens"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[0].title}
                         </NavLink>
@@ -48,7 +48,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/adults_products"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[1].title}
                         </NavLink>
@@ -56,7 +56,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/educational"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[2].title}
                         </NavLink>
@@ -64,7 +64,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/best_sellers"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[3].title}
                         </NavLink>
@@ -72,7 +72,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/english_products"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[4].title}
                         </NavLink>
@@ -80,7 +80,7 @@ const CategoryBox = () => {
                     <li>
                         <NavLink
                             to="/educational"
-                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                            className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                         >
                             {data[5].title}
                         </NavLink>
