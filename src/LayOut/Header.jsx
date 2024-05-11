@@ -9,8 +9,9 @@ import { IoMdCart } from "react-icons/io";
 const Header = () => {
     return (
         <>
-            <header className="w-full pt-1 pb-1 bg-white">
-                <div className="container flex flex-row items-center priceShadow bg-white rounded-3xl px-2">
+            <header className="w-full pt-6  bg-white relative">
+                <div className="bg-primaryGreen w-full h-16 absolute top-0 z-10"></div>
+                <div className="container flex flex-row items-center bg-white rounded-2xl px-2 relative z-20 border-b border-solid border-gray-200">
                     <Link to="/" className="hover:scale-105 primaryTransition">
                         <img src="./../src/assets/Logo.png" alt="Logo.png" />
                     </Link>
