@@ -1,7 +1,44 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home.jsx";
+import ErrorHandler from "./Pages/ErrorHandler.jsx";
+import AdultsProductsPage from "./Pages/AdultsProductsPage.jsx";
+import BestSellersProductsPage from "./Pages/BestSellersProductsPage.jsx";
+import EducationalProductsPage from "./Pages/EducationalProductsPage.jsx";
+import EnglishProductsPage from "./Pages/EnglishProductsPage.jsx";
+import KidsAndTeensProductsPage from "./Pages/KidsAndTeensProductsPage.jsx";
+import OfferProductsPage from "./Pages/OfferProductsPage.jsx";
 
 const App = () => {
-    return <div>App</div>;
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Home />} />
+                <Route
+                    path="/adults_products"
+                    element={<AdultsProductsPage />}
+                />
+                <Route
+                    path="/best_sellers"
+                    element={<BestSellersProductsPage />}
+                />
+                <Route
+                    path="/educational"
+                    element={<EducationalProductsPage />}
+                />
+                <Route
+                    path="/english_products"
+                    element={<EnglishProductsPage />}
+                />
+                <Route
+                    path="/kids_and_teens"
+                    element={<KidsAndTeensProductsPage />}
+                />
+                <Route path="/offers" element={<OfferProductsPage />} />
+                <Route path="*" element={<ErrorHandler />} />
+            </Routes>
+        </BrowserRouter>
+    );
 };
 
 export default App;
