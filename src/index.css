@@ -17,10 +17,17 @@
     .primaryTransition {
         transition: all ease 250ms;
     }
+    .priceShadow {
+        box-shadow: 1px 1px 2px gray;
+    }
+
+    .headerShadow {
+        box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.1);
+    }
 }
 
 body {
     font-family: "IRANSansX";
-    font-size: 16px;
+    font-size: 15px;
     color: #000000;
 }

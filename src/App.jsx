@@ -8,6 +8,8 @@ import EducationalProductsPage from "./Pages/EducationalProductsPage.jsx";
 import EnglishProductsPage from "./Pages/EnglishProductsPage.jsx";
 import KidsAndTeensProductsPage from "./Pages/KidsAndTeensProductsPage.jsx";
 import OfferProductsPage from "./Pages/OfferProductsPage.jsx";
+import Login from "./Pages/Authentication/Login.jsx";
+import Cart from "./Pages/Cart.jsx";
 
 const App = () => {
     return (
@@ -35,6 +37,8 @@ const App = () => {
                     element={<KidsAndTeensProductsPage />}
                 />
                 <Route path="/offers" element={<OfferProductsPage />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="*" element={<ErrorHandler />} />
             </Routes>
         </BrowserRouter>

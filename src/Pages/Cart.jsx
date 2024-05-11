@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../Components/Header.jsx";
 
-const AdultsProductsPage = () => {
+const Cart = () => {
     return (
         <>
             <Header />
-            <h1>AdultsProductsPage</h1>
+            <h1>Cart</h1>
         </>
     );
 };
 
-export default AdultsProductsPage;
+export default Cart;

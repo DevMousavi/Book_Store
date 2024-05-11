@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { api } from "./../server/config.js";
 import { NavLink } from "react-router-dom";
+import { RiDiscountPercentFill } from "react-icons/ri";
 
 const CategoryBox = () => {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await api.get("/category");
                 setData(response);
-                console.log(data);
+                setLoading(false);
             } catch (error) {
                 console.log(error);
             }
@@ -20,23 +22,72 @@ const CategoryBox = () => {
     }, []);
 
     return (
-        <ul>
-            <li>
-                <NavLink to="/sdd">{data[0].title}</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sddfgdfd">{data[1].title}</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sdfgfdgdd">{data[2].title}</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sdfgdfgdd">{data[3].title}</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sdgdgdd">{data[4].title}</NavLink>
-            </li>
-        </ul>
+        <>
+            {loading ? (
+                <h1>loading</h1>
+            ) : (
+                <ul className="flex flex-row justify-between w-[50%]  h-14  items-center mx-auto">
+                    <li>
+                        <NavLink
+                            to="/offers"
+                            className="px-2 flex flex-row gap-2 items-center py-1 text-red-700 font-bold bg-gray-200 rounded-lg primaryTransition hover:bg-green-200"
+                        >
+                            <RiDiscountPercentFill className="text-2xl" />
+                            تخفیفات ویژه
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink
+                            to="/kids_and_teens"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[0].title}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/adults_products"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[1].title}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/educational"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[2].title}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/best_sellers"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[3].title}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/english_products"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[4].title}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/educational"
+                            className="px-2 py-1 bg-gray-100 rounded-lg primaryTransition hover:bg-gray-200 hover:text-red-600 hover:font-bold"
+                        >
+                            {data[5].title}
+                        </NavLink>
+                    </li>
+                </ul>
+            )}
+        </>
     );
 };
 
