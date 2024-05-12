@@ -8,6 +8,7 @@ import DiscountedProducts from "../Components/DiscountedProducts.jsx";
 // Swiper...
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import PartnerBrandsBox from "../Components/PartnerBrandsBox.jsx";
 
 const Home = () => {
     return (
@@ -47,6 +48,10 @@ const Home = () => {
                     </div>
                 </div>
                 <DiscountedProducts />
+                <h2 className="text-3xl text-primaryGreen mt-14">
+                    همکاری ها ...
+                </h2>
+                <PartnerBrandsBox />
             </main>
         </>
     );

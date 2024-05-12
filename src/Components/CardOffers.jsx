@@ -24,9 +24,9 @@ const CardOffers = (props) => {
                     <p>تومان</p>
                 </del>
             </span>
-            <span className="flex justify-center flex-row-reverse gap-1 w-12 rounded-md px-1 text-xl priceShadow absolute bottom-3 left-3">
-                <p className="text-black">{props.score}</p>
-                <FaStar className="text-red-400 " />
+            <span className="flex justify-center flex-row-reverse gap-1 w-16 bg-primaryGreen rounded-md px-1 py-1 text-xl priceShadow absolute bottom-3 left-3">
+                <p className="text-white">{props.score}</p>
+                <FaStar className="text-white " />
             </span>
             <p className="bg-green-600 text-center py-1 w-56 absolute top-5 mr-20 -rotate-45 ">
                 {props.discount}%

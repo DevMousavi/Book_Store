@@ -42,7 +42,7 @@ const DiscountedProducts = () => {
                         .slice(0, 4)
                         .map((item) => (
                             <CardOffers
-                                id={item.id}
+                                key={item.id}
                                 name={item.name}
                                 img={item.image}
                                 first_price={item.initial_price}
