@@ -44,7 +44,7 @@ const Header = () => {
                     </div>
                 </div>
             </header>
-            <div className="w-full bg-white mt-0 headerShadow sticky top-0">
+            <div className="w-full bg-white mt-0 headerShadow sticky top-0 z-50">
                 <CategoryBox />
             </div>
         </>
