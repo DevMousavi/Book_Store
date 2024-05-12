@@ -25,7 +25,7 @@ const PartnerBrandsBox = () => {
             ) : (
                 data.map((item) => (
                     <div
-                        className="font-bold cardOfferShadow py-10 px-10 rounded-3xl"
+                        className="font-bold cardOfferShadow py-10 px-10 rounded-3xl bg-white"
                         key={item.id}
                     >
                         {item.title}
