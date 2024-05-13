@@ -17,7 +17,10 @@ const ErrorHandler = () => {
                     <p className="text-gray-600 font-bold">
                         متاسفم! صفحه ای که به دنبال آن می گردید یافت نشد
                     </p>
-                    <Link className="bg-primaryPink text-white font-bold w-40 text-xl h-12 rounded-xl cardOfferShadow flex justify-center gap-2 items-center primaryTransition hover:scale-105 ">
+                    <Link
+                        to="/"
+                        className="bg-primaryPink text-white font-bold w-40 text-xl h-12 rounded-xl cardOfferShadow flex justify-center gap-2 items-center primaryTransition hover:scale-105 "
+                    >
                         صفحه اصلی
                         <TiArrowBack />
                     </Link>
