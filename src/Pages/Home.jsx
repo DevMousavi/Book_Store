@@ -71,6 +71,26 @@ const Home = () => {
                     link="/english_products"
                     title="کتاب های انگلیسی..."
                 />
+
+                <div className="flex flex-col gap-1 mb-9">
+                    <img
+                        src="./../src/assets/b-1.png"
+                        alt="b-1.png"
+                        className="w-full cardOfferShadow rounded-xl"
+                    />
+                    <div className="flex flex-row w-full justify-between items-center">
+                        <img
+                            src="./../src/assets/b-2.png"
+                            alt="b-2.png"
+                            className="rounded-2xl cardOfferShadow"
+                        />
+                        <img
+                            src="./../src/assets/b-3.png"
+                            alt="b-3.png"
+                            className="rounded-2xl cardOfferShadow"
+                        />
+                    </div>
+                </div>
             </main>
         </>
     );
