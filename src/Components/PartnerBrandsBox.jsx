@@ -1,23 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { api } from "../server/config";
+import React from "react";
+import useFetchData from "./../Hooks/useFetchData.js";
 
 const PartnerBrandsBox = () => {
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await api.get("/partner_brands");
-                setData(response);
-                setIsLoading(false);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, []);
-
+    const { data, isLoading } = useFetchData("/partner_brands");
     return (
         <div className="text-black flex flex-row w-full mx-auto justify-between items-center mb-9 mt-3 px-52 py-7 rounded-2xl border border-solid border-primaryGreen cardOfferShadow">
             {isLoading ? (
