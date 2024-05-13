@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import CardOffers from "./CardOffers.jsx";
 
 import { BsArrowLeftShort } from "react-icons/bs";
-import { api } from "../server/config.js";
+import useFetchData from "../Hooks/useFetchData.js";
 
 const DiscountedProducts = () => {
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await api.get("/offer");
-                setData(response);
-                setIsLoading(false);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, []);
+    const { data, isLoading } = useFetchData("/offer?_page=1&_limit=4");
 
     return (
         <div className="w-full h-[450px] my-10 rounded-xl text-white bg-primaryPink flex flex-col px-11 py-6 cardOfferShadow">
