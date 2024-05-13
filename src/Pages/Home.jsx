@@ -9,6 +9,7 @@ import DiscountedProducts from "../Components/DiscountedProducts.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import PartnerBrandsBox from "../Components/PartnerBrandsBox.jsx";
+import ContainerSimple from "../Components/ContainerSimple.jsx";
 
 const Home = () => {
     return (
@@ -52,6 +53,11 @@ const Home = () => {
                     همکاری ها ...
                 </h2>
                 <PartnerBrandsBox />
+                <ContainerSimple
+                    url="educational?_page=1&_limit=5"
+                    link="/"
+                    title="کمک درسی ..."
+                />
             </main>
         </>
     );
