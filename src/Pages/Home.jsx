@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import PartnerBrandsBox from "../Components/PartnerBrandsBox.jsx";
 import ContainerSimple from "../Components/ContainerSimple.jsx";
+import ColoredContainer from "../Components/ColoredContainer.jsx";
 
 const Home = () => {
     return (
@@ -55,8 +56,20 @@ const Home = () => {
                 <PartnerBrandsBox />
                 <ContainerSimple
                     url="educational?_page=1&_limit=5"
-                    link="/"
+                    link="/educational"
                     title="کمک درسی ..."
+                />
+                <ColoredContainer
+                    url="/adults?_page=1&_limit=4"
+                    title="عمومی بزرگ سالان..."
+                    link="/adults_products"
+                    bg_color="bg-lightBlue"
+                    img_title="adults"
+                />
+                <ContainerSimple
+                    url="english_products?_page=1&_limit=5"
+                    link="/english_products"
+                    title="کتاب های انگلیسی..."
                 />
             </main>
         </>
