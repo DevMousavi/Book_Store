@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
     return (
         <Link
-            to="/about_product"
+            to={`/about_product/${props.id}`}
             className="bg-white w-56 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
         >
             <img
