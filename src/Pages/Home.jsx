@@ -12,6 +12,7 @@ import PartnerBrandsBox from "../Components/PartnerBrandsBox.jsx";
 import ContainerSimple from "../Components/ContainerSimple.jsx";
 import ColoredContainer from "../Components/ColoredContainer.jsx";
 import MiddleBanners from "../Components/MiddleBanners.jsx";
+import Footer from "../LayOut/Footer.jsx";
 
 const Home = () => {
   return (
@@ -111,6 +112,7 @@ const Home = () => {
           img_title="stationery"
         />
         <img src="./../src/assets/last-banner.jpg" alt="last-banner" className="rounded-3xl cursor-pointer my-6" />
+        <Footer/>
       </main>
     </>
   );

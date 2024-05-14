@@ -1,8 +1,13 @@
 import React from 'react'
+import FooterServicesList from '../Components/FooterServicesList'
+import FooterContainer from '../Components/FooterContainer'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='my-16'>
+        <FooterServicesList/>
+        <FooterContainer/>
+    </div>
   )
 }
 
