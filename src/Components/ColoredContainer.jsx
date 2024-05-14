@@ -40,8 +40,8 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
                         className="relative mb-6 left-48"
                     >
                         <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
+                            fillRule="evenodd"
+                            clipRule="evenodd"
                             d="M0 0C31.5006 0.949537 50.52 17.872 56.1955 26.4544L55.986 25.8011L82.4924 58.631C99.3032 79.4521 131.038 79.4521 147.849 58.6309L174.356 25.8011L174.146 26.4544C179.822 17.872 198.844 0.949537 230.349 0H0Z"
                             fill="#f1f5f9"
                         ></path>
