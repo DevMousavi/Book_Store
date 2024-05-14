@@ -1,10 +1,16 @@
 import React from "react";
 import Header from "../LayOut/Header.jsx";
 import { useParams } from "react-router-dom";
+import useFetchData from "../Hooks/useFetchData.js";
 
-const AboutProductPage = (props) => {
+const AboutProductPage = () => {
     const params = useParams();
     console.log(params);
+
+    const { data, isLoading } = useFetchData(
+        `${params.category}?id=${params.id}`
+    );
+    console.log(data);
     return (
         <>
             <Header />

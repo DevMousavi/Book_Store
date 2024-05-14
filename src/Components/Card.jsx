@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
-    const [category, setCategory] = useState(props.category);
-
-    if (category === "آموزشی") {
-        setCategory("educational");
-    } else if (category === "بزرگسالان") {
-        setCategory("");
-    }
-
     return (
         <Link
-            to={`/about_product/${category}/${props.id}`}
+            to={`/about_product/${props.category}/${props.id}`}
             className="bg-white w-56 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
         >
             <img
