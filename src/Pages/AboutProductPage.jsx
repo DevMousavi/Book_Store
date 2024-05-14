@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../LayOut/Header.jsx";
 import { useParams } from "react-router-dom";
 import useFetchData from "../Hooks/useFetchData.js";
+import Header from "../LayOut/Header.jsx";
 
 const AboutProductPage = () => {
     const params = useParams();
@@ -15,8 +15,14 @@ const AboutProductPage = () => {
         <>
             <Header />
             <main className="container bg-red-300 flex flex-row justify-between mt-10">
-                <div className="bg-lightBlue w-[25%]"></div>
-                <div className="bg-gray-300 w-[73%]">a</div>
+                {isLoading ? (
+                    <h2>Loading</h2>
+                ) : (
+                    <>
+                        <div className="bg-lightBlue w-[25%]"></div>
+                        <div className="bg-gray-300 w-[73%]">a</div>
+                    </>
+                )}
             </main>
         </>
     );
