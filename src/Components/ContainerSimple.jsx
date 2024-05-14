@@ -32,6 +32,7 @@ const ContainerSimple = ({ url, title, link }) => {
                             price={item.price}
                             score={item.specifications.score}
                             discount={item.discount}
+                            category={item.category}
                         />
                     ))
                 )}
