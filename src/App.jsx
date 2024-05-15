@@ -13,44 +13,35 @@ import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
 import AuthPage from "./Pages/Authentication/AuthPage.jsx";
 import StationeryPage from "./Pages/StationeryPage.jsx";
+import CartProvider from "./context/CartContext.jsx";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<Home />} />
-                <Route
-                    path="/adults_products"
-                    element={<AdultsProductsPage />}
-                />
-                <Route
-                    path="/best_sellers"
-                    element={<BestSellersProductsPage />}
-                />
-                <Route
-                    path="/educational"
-                    element={<EducationalProductsPage />}
-                />
-                <Route
-                    path="/english_products"
-                    element={<EnglishProductsPage />}
-                />
-                <Route
-                    path="/kids_and_teens"
-                    element={<KidsAndTeensProductsPage />}
-                />
-                <Route path="/offers" element={<OfferProductsPage />} />
-                <Route
-                    path="/about_product/:category/:id"
-                    element={<AboutProductPage />}
-                />
-                <Route path="/stationery" element={<StationeryPage />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/login" element={<AuthPage />} />
-                <Route path="*" element={<ErrorHandler />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/adults_products" element={<AdultsProductsPage />} />
+          <Route path="/best_sellers" element={<BestSellersProductsPage />} />
+          <Route path="/educational" element={<EducationalProductsPage />} />
+          <Route path="/english_products" element={<EnglishProductsPage />} />
+          <Route
+            path="/kids_and_teens"
+            element={<KidsAndTeensProductsPage />}
+          />
+          <Route path="/offers" element={<OfferProductsPage />} />
+          <Route
+            path="/about_product/:category/:id"
+            element={<AboutProductPage />}
+          />
+          <Route path="/stationery" element={<StationeryPage />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="*" element={<ErrorHandler />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
+  );
 };
 
 export default App;

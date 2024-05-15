@@ -8,6 +8,8 @@ import { FaStar, FaUser } from "react-icons/fa6";
 import { IoMdCart } from "react-icons/io";
 import { api } from "../server/config.js";
 
+import { useCart } from "../context/CartContext.jsx";
+
 const Header = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +37,8 @@ const Header = () => {
         };
         fetchData();
     }, [valueInput]);
+
+    const [state] = useCart();
 
     return (
         <>
@@ -68,7 +72,7 @@ const Header = () => {
                             <IoMdCart className="w-6 h-6" />
                             <p> سبدخرید</p>
                             <p className="px-2 py-1 rounded-full priceShadow text-xs bg-white">
-                                0
+                                {state.itemsCount}
                             </p>
                         </Link>
                     </div>
