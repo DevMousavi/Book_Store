@@ -4,7 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 function BasketSideBar() {
   return (
     <div>
-      <div className="bg-white pt-24 px-8 pb-8 relative min-w-72 min-h-80 rounded-3xl mb-4">
+      <div className="bg-white pt-24 px-8 pb-8 relative min-w-72 min-h-80 rounded-3xl mb-4 shadow-md">
         <div className="absolute top-0 right-[123px]">
           <img
             src="./../src/assets/shop.png"
@@ -26,7 +26,7 @@ function BasketSideBar() {
           <span>پرداخت نشده </span>
         </div>
       </div>
-      <div className="bg-primaryGreen text-white w-full rounded-xl h-14 flex items-center justify-center font-bold my-4">
+      <div className="bg-primaryGreen text-white w-full rounded-xl h-14 flex items-center justify-center font-bold my-4 shadow-md">
         <button >
           پرداخت
         </button>
