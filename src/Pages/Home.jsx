@@ -118,8 +118,8 @@ const Home = () => {
                     alt="last-banner"
                     className="rounded-3xl cursor-pointer my-6"
                 />
-                <Footer />
             </main>
+            <Footer />
         </>
     );
 };

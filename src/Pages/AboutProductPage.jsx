@@ -9,6 +9,7 @@ import { IoIosCheckmark } from "react-icons/io";
 import { LuShoppingBasket } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
 import { MdFactory } from "react-icons/md";
+import Footer from "../LayOut/Footer.jsx";
 
 const AboutProductPage = () => {
     const params = useParams();
@@ -160,6 +161,7 @@ const AboutProductPage = () => {
                     </>
                 )}
             </main>
+            <Footer />
         </>
     );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../LayOut/Header.jsx";
 import Pagination from "../Components/Pagination.jsx";
 import ContainerProductListOffer from "../Components/ContainerProductListOffer.jsx";
+import Footer from "../LayOut/Footer.jsx";
 
 const OfferProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
@@ -16,6 +17,7 @@ const OfferProductsPage = () => {
                 />
             </main>
             <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+            <Footer />
         </>
     );
 };

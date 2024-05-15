@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../LayOut/Header.jsx";
 import { Link } from "react-router-dom";
 import { TiArrowBack } from "react-icons/ti";
+import Footer from "../LayOut/Footer.jsx";
 
 const ErrorHandler = () => {
     return (
@@ -26,6 +27,7 @@ const ErrorHandler = () => {
                     </Link>
                 </div>
             </main>
+            <Footer />
         </>
     );
 };

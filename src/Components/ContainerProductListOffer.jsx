@@ -5,7 +5,6 @@ import CardOffers from "./CardOffers";
 
 const ContainerProductListOffer = ({ url, pageNumber }) => {
     const { data, isLoading } = useFetchData(url);
-    console.log(data);
 
     const [number1, setNumber1] = useState(1);
     const [number2, setNumber2] = useState(22);

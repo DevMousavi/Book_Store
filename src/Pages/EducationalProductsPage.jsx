@@ -3,6 +3,7 @@ import Header from "../LayOut/Header.jsx";
 import FilterBox from "../Components/FilterBox.jsx";
 import ContainerProductList from "../Components/ContainerProductList.jsx";
 import Pagination from "../Components/Pagination.jsx";
+import Footer from "../LayOut/Footer.jsx";
 
 const EducationalProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
@@ -18,6 +19,7 @@ const EducationalProductsPage = () => {
                 />
             </main>
             <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+            <Footer />
         </>
     );
 };

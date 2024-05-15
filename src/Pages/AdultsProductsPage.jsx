@@ -3,6 +3,7 @@ import Header from "../LayOut/Header.jsx";
 import FilterBox from "../Components/FilterBox.jsx";
 import ContainerProductList from "../Components/ContainerProductList.jsx";
 import Pagination from "../Components/Pagination.jsx";
+import Footer from "../LayOut/Footer.jsx";
 
 const AdultsProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
@@ -16,6 +17,7 @@ const AdultsProductsPage = () => {
                 <ContainerProductList url={"/adults"} pageNumber={pageNumber} />
             </main>
             <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+            <Footer />
         </>
     );
 };
