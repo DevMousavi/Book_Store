@@ -12,6 +12,7 @@ import Login from "./Pages/Authentication/Login.jsx";
 import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
 import AuthPage from "./Pages/Authentication/AuthPage.jsx";
+import StationeryPage from "./Pages/StationeryPage.jsx";
 
 const App = () => {
     return (
@@ -39,7 +40,11 @@ const App = () => {
                     element={<KidsAndTeensProductsPage />}
                 />
                 <Route path="/offers" element={<OfferProductsPage />} />
-                <Route path="/about_product" element={<AboutProductPage />} />
+                <Route
+                    path="/about_product/:category/:id"
+                    element={<AboutProductPage />}
+                />
+                <Route path="/stationery" element={<StationeryPage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<AuthPage />} />
                 <Route path="*" element={<ErrorHandler />} />

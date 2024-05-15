@@ -24,7 +24,7 @@ const CategoryBox = () => {
                     {data.map((item) => (
                         <li key={item.id}>
                             <NavLink
-                                to="/kids_and_teens"
+                                to={`/${item.href}`}
                                 className="px-2 py-1 bg-white rounded-lg primaryTransition hover:bg-gray-600 hover:text-white hover:font-bold"
                             >
                                 {item.title}
