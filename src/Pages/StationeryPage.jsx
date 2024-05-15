@@ -10,7 +10,7 @@ const StationeryPage = () => {
     return (
         <>
             <Header />
-            <main className="container w-full justify-between bg-slate-300 my-12 py-4 px-7 flex flex-row">
+            <main className="container w-full justify-between  my-12 py-4 px-7 flex flex-row">
                 <FilterBox />
                 <ContainerProductList
                     url="/stationery"
