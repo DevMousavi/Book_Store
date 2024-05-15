@@ -10,7 +10,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      if (!state.selecteditems.find((item) => item.id === action.payload.id)) {
+      if (!state.selecteditems.find((item) => item.id === action.payload.id && item.category === action.payload.category)) {
         state.selecteditems.push({ ...action.payload, numbers: 1 });
       }
 
