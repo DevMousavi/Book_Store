@@ -1,5 +1,5 @@
-import React, { useContext, useReducer } from "react";
-
+import React, { createContext, useContext, useReducer } from "react";
+import { sumItem } from "../helpers/helper";
 const initialState = {
   selecteditems: [],
   itemsCount: 0,
@@ -49,13 +49,21 @@ const reducer = (state, action) => {
         selecteditems: [...newSelectedItems],
         ...sumItem(newSelectedItems),
       };
+    case "CHECKOUT":
+      
+      return {
+        selecteditems: [],
+        itemsCount: 0,
+        total: 0,
+        checkOut: true,
+      };
 
     default:
       throw new Error("Invalid Action!");
   }
 };
 
-const CartContext = useContext();
+const CartContext = createContext();
 
 function CartProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -68,10 +76,9 @@ function CartProvider({ children }) {
 }
 
 const useCart = () => {
-    const { state, dispatch } = useContext(CartContext);
-    return [state, dispatch];
-  };
-  
+  const { state, dispatch } = useContext(CartContext);
+  return [state, dispatch];
+};
 
 export default CartProvider;
-export {useCart}
+export { useCart };

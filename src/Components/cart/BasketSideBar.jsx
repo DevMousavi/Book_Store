@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 
-function BasketSideBar() {
+function BasketSideBar({state,clickHandler}) {
   return (
     <div>
       <div className="bg-white pt-24 px-8 pb-8 relative min-w-72 min-h-80 rounded-3xl mb-4 shadow-md">
@@ -15,11 +15,11 @@ function BasketSideBar() {
         </div>
         <div className="flex justify-evenly mt-2">
           <p>تعداد کالاها : </p>
-          <span> 3</span>
+          <span>{state.itemsCount}</span>
         </div>
         <div className="flex justify-evenly border-b-2 border-dashed border-slate-400 pb-7 mt-4">
           <p>جمع مبلغ کالاها : </p>
-          <span> 220000 تومان</span>
+          <span> {state.total} تومان</span>
         </div>
         <div className="flex justify-evenly mt-7">
           <p>وضعیت پرداخت : </p>
@@ -27,7 +27,7 @@ function BasketSideBar() {
         </div>
       </div>
       <div className="bg-primaryGreen text-white w-full rounded-xl h-14 flex items-center justify-center font-bold my-4 shadow-md">
-        <button >
+        <button onClick={()=>clickHandler("CHECKOUT")}>
           پرداخت
         </button>
         <IoIosArrowBack />

@@ -6,8 +6,10 @@ import LogoSRC from "./../assets/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa6";
 import { IoMdCart } from "react-icons/io";
+import { useCart } from "../context/CartContext.jsx";
 
 const Header = () => {
+    const [state] = useCart();
     return (
         <>
             <header className="w-full pt-6  bg-white relative">
@@ -39,7 +41,7 @@ const Header = () => {
                             <IoMdCart className="w-6 h-6" />
                             <p> سبدخرید</p>
                             <p className="px-2 py-1 rounded-full priceShadow text-xs bg-white">
-                                0
+                            {state.itemsCount}
                             </p>
                         </Link>
                     </div>
