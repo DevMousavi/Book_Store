@@ -11,6 +11,7 @@ import OfferProductsPage from "./Pages/OfferProductsPage.jsx";
 import Login from "./Pages/Authentication/Login.jsx";
 import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
+import StationeryPage from "./Pages/StationeryPage.jsx";
 
 const App = () => {
     return (
@@ -42,6 +43,7 @@ const App = () => {
                     path="/about_product/:category/:id"
                     element={<AboutProductPage />}
                 />
+                <Route path="/stationery" element={<StationeryPage />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="*" element={<ErrorHandler />} />

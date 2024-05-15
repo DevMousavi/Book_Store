@@ -2,27 +2,33 @@
     "category": [
         {
             "id": 1,
-            "title": "کودک و نوجوان"
+            "title": "کودک و نوجوان",
+            "href": "kids_and_teens"
         },
         {
             "id": 2,
-            "title": "بزرگسال"
+            "title": "بزرگسال",
+            "href": "adults_products"
         },
         {
             "id": 3,
-            "title": "آموزشی"
+            "title": "آموزشی",
+            "href": "educational"
         },
         {
             "id": 4,
-            "title": "پرفروش ترین ها"
+            "title": "پرفروش ترین ها",
+            "href": "best_sellers"
         },
         {
             "id": 5,
-            "title": "انگلیسی"
+            "title": "انگلیسی",
+            "href": "english_products"
         },
         {
             "id": 6,
-            "title": "لوازم تحرید"
+            "title": "لوازم تحرید",
+            "href": "stationery"
         }
     ],
     "offer": [
