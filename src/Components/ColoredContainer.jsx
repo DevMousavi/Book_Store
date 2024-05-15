@@ -8,7 +8,11 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
     const { data, isLoading } = useFetchData(url);
 
     return (
+<<<<<<< HEAD
         <div className="mb-20  ">
+=======
+        <div className="mb-20 ">
+>>>>>>> DynamicPage
             <div className="flex justify-between items-center">
                 <p className="font-bold text-3xl ">{title}</p>
                 <Link
@@ -43,6 +47,7 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
                                 price={item.price}
                                 score={item.specifications.score}
                                 discount={item.discount}
+                                category={item.category}
                             />
                         ))
                     )}
