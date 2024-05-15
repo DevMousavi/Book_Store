@@ -12,7 +12,8 @@ const AdultsProductsPage = () => {
             <Header />
             <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
                 <FilterBox />
-                <ContainerProductList url="/adults" pageNumber={pageNumber} />
+
+                <ContainerProductList url={"/adults"} pageNumber={pageNumber} />
             </main>
             <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
         </>

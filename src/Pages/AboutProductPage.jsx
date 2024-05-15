@@ -12,12 +12,10 @@ import { MdFactory } from "react-icons/md";
 
 const AboutProductPage = () => {
     const params = useParams();
-    console.log(params);
 
     const { data, isLoading } = useFetchData(
         `${params.category}?id=${params.id}`
     );
-    console.log(data);
 
     return (
         <>
@@ -144,12 +142,15 @@ const AboutProductPage = () => {
                                 </h2>
                                 <div className="w-full">
                                     {data[0].comment.map((item) => (
-                                        <div className="w-full mt-4 text-gray-700 bg-orange-100 px-6 py-10 border-2 border-dashed rounded-md border-blue">
+                                        <div
+                                            key={item.id}
+                                            className="w-full mt-4 text-gray-700 bg-orange-100 px-6 py-10 border-2 border-dashed rounded-md border-blue"
+                                        >
                                             <span className="w-full flex flex-col gap-6 ">
                                                 <h2 className="text-black font-bold text-sm">
                                                     کاربر ...
                                                 </h2>
-                                                <p className="">{item}</p>
+                                                <p>{item}</p>
                                             </span>
                                         </div>
                                     ))}

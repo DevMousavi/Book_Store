@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useFetchData from "../Hooks/useFetchData";
 import Card from "./Card";
 
-const ContainerProductList = ({ url, pageNumber }) => {
+const ContainerProductList = ({ url, pageNumber, sortLeast, sortMost }) => {
     const { data, isLoading } = useFetchData(url);
 
     const [number1, setNumber1] = useState(1);
@@ -25,7 +25,7 @@ const ContainerProductList = ({ url, pageNumber }) => {
             setNumber1(89);
             setNumber2(200);
         }
-    }, [pageNumber]);
+    }, [pageNumber, data]);
 
     return (
         <div className="w-[77%] cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
