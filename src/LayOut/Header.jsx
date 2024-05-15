@@ -85,6 +85,7 @@ const Header = () => {
                     <div className="w-[80%] h-96 p-6 bg-white cardOfferShadow rounded-xl overflow-y-auto">
                         {data.map((item) => (
                             <Link
+                                to={`/about_product/${item.category}/${item.id}`}
                                 key={item.id}
                                 className="flex flex-row items-center justify-between border rounded-md px-3 hover:scale-105 primaryTransition"
                             >

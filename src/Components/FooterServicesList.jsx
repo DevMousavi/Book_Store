@@ -1,11 +1,13 @@
 import React from "react";
+import Package from "./../assets/footer/package.png";
+import Headphones from "./../assets/footer/headphones.png";
 
 function FooterServicesList() {
     return (
         <div className="flex justify-between border-slate-300 border-b pb-5 bg-gray-200 px-64 py-6 cursor-default">
             <div className="flex items-center">
                 <img
-                    src="./../src/assets/footer/headphones.png"
+                    src={Headphones}
                     alt="footer-icon"
                     width="35"
                     height="35"
@@ -20,7 +22,7 @@ function FooterServicesList() {
             </div>
             <div className="flex items-center">
                 <img
-                    src="./../src/assets/footer/package.png"
+                    src={Package}
                     alt="footer-icon"
                     width="35"
                     height="35"
@@ -37,7 +39,7 @@ function FooterServicesList() {
             </div>
             <div className="flex items-center">
                 <img
-                    src="./../src/assets/footer/package.png"
+                    src={Package}
                     alt="footer-icon"
                     width="35"
                     height="35"
@@ -54,7 +56,7 @@ function FooterServicesList() {
             </div>
             <div className="flex items-center">
                 <img
-                    src="./../src/assets/footer/package.png"
+                    src={Package}
                     alt="footer-icon"
                     width="35"
                     height="35"
