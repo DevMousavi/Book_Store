@@ -11,6 +11,7 @@ import OfferProductsPage from "./Pages/OfferProductsPage.jsx";
 import Login from "./Pages/Authentication/Login.jsx";
 import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
+import AuthPage from "./Pages/Authentication/AuthPage.jsx";
 
 const App = () => {
     return (
@@ -40,7 +41,7 @@ const App = () => {
                 <Route path="/offers" element={<OfferProductsPage />} />
                 <Route path="/about_product" element={<AboutProductPage />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<AuthPage />} />
                 <Route path="*" element={<ErrorHandler />} />
             </Routes>
         </BrowserRouter>
