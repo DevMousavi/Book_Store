@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryBox from "../Components/CategoryBox.jsx";
 import { Link } from "react-router-dom";
+import LogoSRC from "./../assets/Logo.png";
 
 import { CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa6";
@@ -13,7 +14,7 @@ const Header = () => {
                 <div className="bg-primaryGreen w-full h-16 absolute top-0 z-10"></div>
                 <div className="container flex flex-row items-center bg-white rounded-2xl px-2 relative z-20 border-b border-solid border-gray-200">
                     <Link to="/" className="hover:scale-105 primaryTransition">
-                        <img src="./../src/assets/Logo.png" alt="Logo.png" />
+                        <img src={LogoSRC} alt="Logo.png" />
                     </Link>
                     <div className="w-[50%] h-12 rounded-xl flex flex-row items-center bg-slate-200 mr-7">
                         <CiSearch className="w-9 h-24 " />
