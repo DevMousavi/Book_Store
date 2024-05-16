@@ -7,7 +7,6 @@ import Footer from "../LayOut/Footer.jsx";
 
 const Cart = () => {
     const [state, dispatch] = useCart();
-    console.log(state);
     const clickHandler = (type, payload) => {
         dispatch({ type, payload });
     };

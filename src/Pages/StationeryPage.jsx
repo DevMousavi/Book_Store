@@ -14,7 +14,11 @@ const StationeryPage = () => {
         <>
             <Header />
             <main className="container w-full justify-between  my-12 py-4 px-7 flex flex-row">
-                <FilterBox setCategory={setCategory} setReset={setReset} />
+                <FilterBox
+                    setCategory={setCategory}
+                    setReset={setReset}
+                    setPageNumber={setPageNumber}
+                />
                 <ContainerProductList
                     url="/stationery"
                     pageNumber={pageNumber}

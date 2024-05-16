@@ -40,12 +40,14 @@ const ContainerProductListOffer = ({ url, pageNumber }) => {
                     .map((item) => (
                         <CardOffers
                             key={item.id}
+                            id={item.id}
                             name={item.name}
                             img={item.image}
                             first_price={item.initial_price}
                             second_price={item.final_price}
                             score={item.specifications.score}
                             discount={item.discount}
+                            category={item.category}
                         />
                     ))
             )}

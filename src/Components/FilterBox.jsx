@@ -1,19 +1,22 @@
 import React from "react";
 import { FaArrowsRotate } from "react-icons/fa6";
 
-const FilterBox = ({ setCategory, setReset }) => {
+const FilterBox = ({ setCategory, setReset, setPageNumber }) => {
     const highestPriceHandler = () => {
         setCategory("highestPrice");
         setReset(true);
+        setPageNumber(1);
     };
     const lowestPriceHandler = () => {
         setCategory("lowestPrice");
         setReset(true);
+        setPageNumber(1);
     };
 
     const mostPopularHandler = () => {
         setCategory("MostPopular");
         setReset(true);
+        setPageNumber(1);
     };
 
     return (
