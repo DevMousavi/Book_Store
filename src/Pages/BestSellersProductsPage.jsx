@@ -7,15 +7,19 @@ import Footer from "../LayOut/Footer.jsx";
 
 const BestSellersProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
+    const [reset, setReset] = useState(false);
+    const [category, setCategory] = useState("");
 
     return (
         <>
             <Header />
             <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
-                <FilterBox />
+                <FilterBox setCategory={setCategory} setReset={setReset} />
                 <ContainerProductList
                     url="/best_sellers"
                     pageNumber={pageNumber}
+                    category={category}
+                    reset={reset}
                 />
             </main>
             <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />

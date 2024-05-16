@@ -7,29 +7,19 @@ import Footer from "../LayOut/Footer.jsx";
 
 const AdultsProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
-
     const [reset, setReset] = useState(false);
     const [category, setCategory] = useState("");
-    const [mostPopular, setMostPopular] = useState(false);
 
     return (
         <>
             <Header />
             <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
-                <FilterBox
-                    setCategory={setCategory}
-                    category={category}
-                    reset={reset}
-                    setReset={setReset}
-                    setPageNumber={setReset}
-                />
+                <FilterBox setCategory={setCategory} setReset={setReset} />
 
                 <ContainerProductList
                     url={"/adults"}
                     pageNumber={pageNumber}
-                    setCategory={setCategory}
                     category={category}
-                    setReset={setReset}
                     reset={reset}
                 />
             </main>
