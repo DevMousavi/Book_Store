@@ -114,7 +114,7 @@ const Home = () => {
                     img_title="stationery"
                 />
                 <img
-                    src="./../src/assets/last-banner.jpg"
+                    src="./../src/assets/banner.jpg"
                     alt="last-banner"
                     className="rounded-3xl cursor-pointer my-6"
                 />
