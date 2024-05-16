@@ -28,7 +28,7 @@ const CardOffers = (props) => {
                 <p className="text-white">{props.score}</p>
                 <FaStar className="text-white " />
             </span>
-            <p className="bg-green-600 text-center py-1 w-56 absolute top-5 mr-20 -rotate-45 ">
+            <p className="bg-green-600 tracking-widest text-white font-bold  text-center py-1 w-56 absolute top-5 mr-20 -rotate-45 ">
                 {props.discount}%
             </p>
         </Link>
