@@ -1,6 +1,6 @@
 import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { separateDigits } from "../../Helpers/separateDigits";
+import { separateDigits } from "../../helpers/separateDigits";
 
 function BasketSideBar({ state, clickHandler }) {
     return (

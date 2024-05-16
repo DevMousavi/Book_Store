@@ -8,7 +8,8 @@ import { FaStar, FaUser } from "react-icons/fa6";
 import { IoMdCart } from "react-icons/io";
 import { api } from "../server/config.js";
 
-import { useCart } from "../Context/CartContext.jsx";
+// import { useCart } from "../Context/CartContext.jsx";
+import { useCart } from "../context/CartContext.jsx";
 
 const Header = () => {
     const [data, setData] = useState([]);

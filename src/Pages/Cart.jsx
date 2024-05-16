@@ -2,7 +2,8 @@ import React from "react";
 import Header from "../LayOut/Header.jsx";
 import BasketCard from "../Components/cart/BasketCard.jsx";
 import BasketSideBar from "../Components/cart/BasketSideBar.jsx";
-import { useCart } from "../Context/CartContext.jsx";
+// import { useCart } from "../Context/CartContext.jsx";
+import { useCart } from "../context/CartContext.jsx";
 import Footer from "../LayOut/Footer.jsx";
 
 const Cart = () => {

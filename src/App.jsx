@@ -13,7 +13,8 @@ import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
 import AuthPage from "./Pages/Authentication/AuthPage.jsx";
 import StationeryPage from "./Pages/StationeryPage.jsx";
-import CartProvider from "./Context/CartContext.jsx";
+// import CartProvider from "./Context/CartContext.jsx";
+import CartProvider from "./context/CartContext.jsx";
 
 const App = () => {
     return (

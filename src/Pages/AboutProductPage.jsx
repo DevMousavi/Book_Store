@@ -4,14 +4,16 @@ import useFetchData from "../Hooks/useFetchData.js";
 import Header from "../LayOut/Header.jsx";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { ImTruck } from "react-icons/im";
-import { checkKeyInObject } from "../Helpers/checkKeyInObject.js";
+// import { checkKeyInObject } from "../Helpers/checkKeyInObject.js";
+import { checkKeyInObject } from "../helpers/checkKeyInObject.js";
 import { IoIosCheckmark } from "react-icons/io";
 import { LuShoppingBasket } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
 import { MdFactory } from "react-icons/md";
 import Footer from "../LayOut/Footer.jsx";
 
-import { useCart } from "../Context/CartContext.jsx";
+// import { useCart } from "../Context/CartContext.jsx";
+import { useCart } from "../context/CartContext.jsx";
 import Loader from "../Components/Loader/Loader.jsx";
 
 const AboutProductPage = () => {
