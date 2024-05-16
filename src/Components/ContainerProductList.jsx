@@ -3,7 +3,7 @@ import useFetchData from "../Hooks/useFetchData";
 import Card from "./Card";
 import Loader from "./Loader/Loader";
 
-const ContainerProductList = ({ url, pageNumber, price, reset, setReset }) => {
+const ContainerProductList = ({ url, pageNumber, category, reset }) => {
     const { data, isLoading } = useFetchData(url);
     const [filteredData, setFilteredData] = useState([]);
 
@@ -11,15 +11,20 @@ const ContainerProductList = ({ url, pageNumber, price, reset, setReset }) => {
         if (reset == false) {
             setFilteredData(data);
         } else {
-            if (price === "highestPrice") {
+            if (category === "highestPrice") {
                 const sortedData = [...data].sort((a, b) => b.price - a.price);
                 setFilteredData(sortedData);
-            } else if (price == "lowestPrice") {
+            } else if (category == "lowestPrice") {
                 const sortedData = [...data].sort((a, b) => a.price - b.price);
+                setFilteredData(sortedData);
+            } else if (category == "MostPopular") {
+                const sortedData = [...data].sort(
+                    (a, b) => b.specifications.score - a.specifications.score
+                );
                 setFilteredData(sortedData);
             }
         }
-    }, [data, reset, price]);
+    }, [data, reset, category]);
 
     const [number1, setNumber1] = useState(1);
     const [number2, setNumber2] = useState(22);

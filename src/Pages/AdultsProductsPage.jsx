@@ -9,15 +9,16 @@ const AdultsProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
 
     const [reset, setReset] = useState(false);
-    const [price, setPrice] = useState("");
+    const [category, setCategory] = useState("");
+    const [mostPopular, setMostPopular] = useState(false);
 
     return (
         <>
             <Header />
             <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
                 <FilterBox
-                    setPrice={setPrice}
-                    price={price}
+                    setCategory={setCategory}
+                    category={category}
                     reset={reset}
                     setReset={setReset}
                     setPageNumber={setReset}
@@ -26,13 +27,13 @@ const AdultsProductsPage = () => {
                 <ContainerProductList
                     url={"/adults"}
                     pageNumber={pageNumber}
-                    setPrice={setPrice}
-                    price={price}
-                    reset={reset}
+                    setCategory={setCategory}
+                    category={category}
                     setReset={setReset}
+                    reset={reset}
                 />
             </main>
-            <Pagination pageNumber={pageNumber} />
+            <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
             <Footer />
         </>
     );

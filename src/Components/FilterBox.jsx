@@ -1,13 +1,18 @@
 import React from "react";
 import { FaArrowsRotate } from "react-icons/fa6";
 
-const FilterBox = ({ setPrice, reset, setReset }) => {
+const FilterBox = ({ setCategory, setReset }) => {
     const highestPriceHandler = () => {
-        setPrice("highestPrice");
+        setCategory("highestPrice");
         setReset(true);
     };
     const lowestPriceHandler = () => {
-        setPrice("lowestPrice");
+        setCategory("lowestPrice");
+        setReset(true);
+    };
+
+    const mostPopularHandler = () => {
+        setCategory("MostPopular");
         setReset(true);
     };
 
@@ -27,7 +32,10 @@ const FilterBox = ({ setPrice, reset, setReset }) => {
                 >
                     کمترین قیمت
                 </button>
-                <button className="bg-primaryPink text-white w-40 h-10 rounded-md cardOfferShadow primaryTransition hover:scale-105 ">
+                <button
+                    onClick={mostPopularHandler}
+                    className="bg-primaryPink text-white w-40 h-10 rounded-md cardOfferShadow primaryTransition hover:scale-105 "
+                >
                     محبوب ترین
                 </button>
             </div>
