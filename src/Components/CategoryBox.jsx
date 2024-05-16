@@ -9,7 +9,7 @@ const CategoryBox = () => {
     return (
         <>
             {isLoading ? (
-                <h1>Loading</h1>
+                <div className="w-full h-12 flex items-center justify-center"></div>
             ) : (
                 <ul className="flex flex-row justify-between w-[60%] px-5 bg-gray-200 rounded-bl-2xl rounded-br-2xl h-14  items-center mx-auto">
                     <li>

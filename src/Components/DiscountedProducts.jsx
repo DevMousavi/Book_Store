@@ -4,6 +4,7 @@ import CardOffers from "./CardOffers.jsx";
 
 import { BsArrowLeftShort } from "react-icons/bs";
 import useFetchData from "../Hooks/useFetchData.js";
+import Loader from "./Loader/Loader.jsx";
 
 const DiscountedProducts = () => {
     const { data, isLoading } = useFetchData("/offer?_page=1&_limit=4");
@@ -22,7 +23,9 @@ const DiscountedProducts = () => {
             </div>
             <div className="w-full flex flex-row justify-between mt-2">
                 {isLoading ? (
-                    <h1>Loading</h1>
+                    <div className="w-full h-72 flex items-center justify-center">
+                        <Loader />
+                    </div>
                 ) : (
                     data
                         .slice(0, 4)

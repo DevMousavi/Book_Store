@@ -3,6 +3,7 @@ import { BsArrowLeftShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Card from "./Card";
 import useFetchData from "../Hooks/useFetchData";
+import Loader from "./Loader/Loader";
 
 export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
     const { data, isLoading } = useFetchData(url);
@@ -32,7 +33,9 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
                 </div>
                 <div className="w-full flex flex-row justify-between mt-2 pl-2 pr-72">
                     {isLoading ? (
-                        <h1>Loading ...</h1>
+                        <div className="w-full flex items-center justify-center">
+                            <Loader />
+                        </div>
                     ) : (
                         data.map((item) => (
                             <Card

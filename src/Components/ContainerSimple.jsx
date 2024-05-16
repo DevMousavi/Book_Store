@@ -3,6 +3,7 @@ import useFetchData from "../Hooks/useFetchData.js";
 import { Link } from "react-router-dom";
 import Card from "./Card.jsx";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import Loader from "./Loader/Loader.jsx";
 
 const ContainerSimple = ({ url, title, link }) => {
     const { data, isLoading } = useFetchData(url);
@@ -21,7 +22,9 @@ const ContainerSimple = ({ url, title, link }) => {
             </span>
             <div className="w-full flex flex-row justify-between mt-2 mb-20">
                 {isLoading ? (
-                    <h1>Loading ...</h1>
+                    <div className="w-full h-64 flex items-center justify-center">
+                        <Loader />
+                    </div>
                 ) : (
                     data.map((item) => (
                         <Card
