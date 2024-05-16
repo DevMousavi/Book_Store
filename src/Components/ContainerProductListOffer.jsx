@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import useFetchData from "../Hooks/useFetchData";
-import Card from "./Card";
 import CardOffers from "./CardOffers";
 import Loader from "./Loader/Loader";
 

@@ -3,8 +3,23 @@ import useFetchData from "../Hooks/useFetchData";
 import Card from "./Card";
 import Loader from "./Loader/Loader";
 
-const ContainerProductList = ({ url, pageNumber, sortLeast, sortMost }) => {
+const ContainerProductList = ({ url, pageNumber, price, reset, setReset }) => {
     const { data, isLoading } = useFetchData(url);
+    const [filteredData, setFilteredData] = useState([]);
+
+    useEffect(() => {
+        if (reset == false) {
+            setFilteredData(data);
+        } else {
+            if (price === "highestPrice") {
+                const sortedData = [...data].sort((a, b) => b.price - a.price);
+                setFilteredData(sortedData);
+            } else if (price == "lowestPrice") {
+                const sortedData = [...data].sort((a, b) => a.price - b.price);
+                setFilteredData(sortedData);
+            }
+        }
+    }, [data, reset, price]);
 
     const [number1, setNumber1] = useState(1);
     const [number2, setNumber2] = useState(22);
@@ -35,7 +50,7 @@ const ContainerProductList = ({ url, pageNumber, sortLeast, sortMost }) => {
                     <Loader />
                 </div>
             ) : (
-                data
+                filteredData
                     .slice(number1, number2)
                     .map((item) => (
                         <Card

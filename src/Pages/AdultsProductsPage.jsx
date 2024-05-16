@@ -8,15 +8,31 @@ import Footer from "../LayOut/Footer.jsx";
 const AdultsProductsPage = () => {
     const [pageNumber, setPageNumber] = useState(1);
 
+    const [reset, setReset] = useState(false);
+    const [price, setPrice] = useState("");
+
     return (
         <>
             <Header />
             <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
-                <FilterBox />
+                <FilterBox
+                    setPrice={setPrice}
+                    price={price}
+                    reset={reset}
+                    setReset={setReset}
+                    setPageNumber={setReset}
+                />
 
-                <ContainerProductList url={"/adults"} pageNumber={pageNumber} />
+                <ContainerProductList
+                    url={"/adults"}
+                    pageNumber={pageNumber}
+                    setPrice={setPrice}
+                    price={price}
+                    reset={reset}
+                    setReset={setReset}
+                />
             </main>
-            <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+            <Pagination pageNumber={pageNumber} />
             <Footer />
         </>
     );
