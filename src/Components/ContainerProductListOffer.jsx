@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useFetchData from "../Hooks/useFetchData";
 import Card from "./Card";
 import CardOffers from "./CardOffers";
+import Loader from "./Loader/Loader";
 
 const ContainerProductListOffer = ({ url, pageNumber }) => {
     const { data, isLoading } = useFetchData(url);
@@ -31,7 +32,9 @@ const ContainerProductListOffer = ({ url, pageNumber }) => {
     return (
         <div className="w-full cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
             {isLoading ? (
-                <h1>Loading...</h1>
+                <div className="w-full h-72 flex items-center justify-center">
+                    <Loader />
+                </div>
             ) : (
                 data
                     .slice(number1, number2)

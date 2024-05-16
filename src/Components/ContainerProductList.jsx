@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useFetchData from "../Hooks/useFetchData";
 import Card from "./Card";
+import Loader from "./Loader/Loader";
 
 const ContainerProductList = ({ url, pageNumber, sortLeast, sortMost }) => {
     const { data, isLoading } = useFetchData(url);
@@ -30,7 +31,9 @@ const ContainerProductList = ({ url, pageNumber, sortLeast, sortMost }) => {
     return (
         <div className="w-[77%] cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
             {isLoading ? (
-                <h1>Loading...</h1>
+                <div className="w-full h-96 flex items-center justify-center">
+                    <Loader />
+                </div>
             ) : (
                 data
                     .slice(number1, number2)
