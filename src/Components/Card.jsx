@@ -6,12 +6,12 @@ const Card = (props) => {
     return (
         <Link
             to={`/about_product/${props.category}/${props.id}`}
-            className="bg-white w-56 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
+            className="bg-white sm:mr-3 lg:mr-0 ml-3 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
         >
             <img
                 src={props.img}
                 alt={`${props.name}.png`}
-                className="w-full h-56 mx-auto rounded"
+                className="md:h-48 xl:h-56 w-full h-56 mx-auto rounded"
             />
             <h3 className="text-black font-bold text-sm my-2 mr-2">
                 {props.name}

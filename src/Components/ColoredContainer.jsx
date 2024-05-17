@@ -14,7 +14,7 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
   return (
     <div className="mb-20  ">
       <div className="flex justify-between items-center">
-        <p className="font-bold md:text-3xl af:text-xl af:mx-3 md:mx-0 ">{title}</p>
+        <p className="font-bold lg:text-3xl af:text-xl af:mx-3 lg:mx-0 ">{title}</p>
         <Link
           to={link}
           className="flex flex-row-reverse items-center gap-1 primaryTransition hover:scale-105"
@@ -26,15 +26,15 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
         </Link>
       </div>
       <div
-        className={`w-full h-[400px] my-3 rounded-xl ${bg_color} flex flex-col justify-center ColoredContainerShadow md:relative`}
+        className={`w-full min-h-[400px] my-3 rounded-xl ${bg_color} flex flex-col justify-center ColoredContainerShadow lg:relative`}
       >
-        <div className="md:absolute md:flex af:hidden flex-col-reverse bottom-[-18px] right-16 max-w-52 ">
+        <div className="lg:absolute xl:flex af:hidden flex-col-reverse bottom-[-18px] right-16 max-w-52 ">
           <img
             src={`./../src/assets/colored-container/${img_title}.png`}
             alt={img_title}
           />
         </div>
-        <div className="w-full md:flex md:flex-row md:justify-between mt-2 md:pl-2 md:pr-72">
+        <div className="w-full md:flex md:flex-row md:justify-around xl:justify-between mt-2 lg:px-2 xl:pr-72">
           {isLoading ? (
             <div className="w-full flex items-center justify-center">
               <Loader />
@@ -43,8 +43,8 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
             <div>
               <Swiper
                 spaceBetween={50}
-                slidesPerView={1.2}
-                className="w-full mt-3 mb-10 py-3 px-3 sm:hidden"
+                slidesPerView={1.5}
+                className="w-full mt-3 mb-10 py-3 px-3 md:hidden"
               >
                 {data.map((item) => (
                   <SwiperSlide key={item.id}>
@@ -61,7 +61,7 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="af:hidden sm:flex flex-row flex-wrap sm:justify-around  sm:gap-y-4 xl:justify-between xl:gap-y-0 mb-8">
+              <div className="af:hidden md:flex flex-row flex-wrap md:flex-nowrap sm:justify-around  sm:gap-y-4 md:justify-between md:gap-y-0 mb-8">
                 {data.map((item) => (
                   <Card
                     key={item.id}
