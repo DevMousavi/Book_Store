@@ -49,7 +49,7 @@ const ContainerSimple = ({ url, title, link }) => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="af:hidden sm:flex flex-row flex-wrap sm:justify-around  sm:gap-y-4 xl:justify-between xl:gap-y-0 mb-8">
+                    <div className="af:hidden sm:flex flex-row flex-wrap lg:flex-nowrap sm:justify-around  sm:gap-y-4 xl:justify-between xl:gap-y-0 mb-8">
                         {data.map((item) => (
                             <Card
                                 key={item.id}
