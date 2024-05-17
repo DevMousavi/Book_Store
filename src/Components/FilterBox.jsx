@@ -73,7 +73,7 @@ const FilterBox = ({ setCategory, setReset, setPageNumber }) => {
                     </button>
                     <FaArrowsRotate
                         onClick={() => setReset(false)}
-                        className=" text-primaryPink hover:text-primaryGreen w-5 h-5 cursor-pointer primaryTransition hover:rotate-[390deg]"
+                        className=" bg-yellow-100 p-2 rounded-xl text-primaryPink hover:text-primaryGreen w-10 h-10 cursor-pointer primaryTransition hover:rotate-[390deg]"
                     />
                 </div>
             </div>
