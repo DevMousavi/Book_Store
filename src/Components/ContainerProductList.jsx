@@ -49,7 +49,7 @@ const ContainerProductList = ({ url, pageNumber, category, reset }) => {
     }, [pageNumber, data]);
 
     return (
-        <div className="w-[77%] cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
+        <div className="w-full cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
             {isLoading ? (
                 <div className="w-full h-96 flex items-center justify-center">
                     <Loader />

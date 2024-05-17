@@ -6,7 +6,7 @@ const CardOffers = (props) => {
     return (
         <Link
             to={`/about_product/${props.category}/${props.id}`}
-            className="bg-white as:w-52 md:w-64 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
+            className="bg-white as:w-52 as:mx-auto md:w-64 h-[370px] rounded-xl px-2 py-3 cardOfferShadow flex flex-col relative overflow-hidden primaryTransition hover:scale-105"
         >
             <img
                 src={props.img}
@@ -28,7 +28,7 @@ const CardOffers = (props) => {
                 <p className="text-white">{props.score}</p>
                 <FaStar className="text-white " />
             </span>
-            <p className="bg-green-600 tracking-widest text-white font-bold  text-center py-1 w-56 absolute top-5 as:mr-14 md:mr-20 -rotate-45 ">
+            <p className="bg-green-600 tracking-widest text-white font-bold  text-center py-1 w-56 absolute top-5 as:mr-10 md:mr-20 -rotate-45 ">
                 {props.discount}%
             </p>
         </Link>
