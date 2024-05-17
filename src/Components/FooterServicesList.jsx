@@ -15,7 +15,7 @@ function FooterServicesList() {
                     <p className="text-sm">
                         پشتیبانی <span className="font-bold">24 ساعته</span>
                     </p>
-                    <p className="text-xs text-slate-500 af:hidden">تماس با 0214400</p>
+                    <p className="md:flex text-xs text-slate-500 af:hidden">تماس با 0214400</p>
                 </div>
             </div>
             <div className="flex items-center">
@@ -28,7 +28,7 @@ function FooterServicesList() {
                     <p className="text-sm ">
                         فرصت 7 روز <span className="font-bold">برگشت کالا</span>
                     </p>
-                    <p className="text-xs text-slate-500 af:hidden ">
+                    <p className="text-xs text-slate-500 af:hidden md:flex">
                         ضمانت بازگشت کالا تا 7 روز
                     </p>
                 </div>
@@ -43,7 +43,7 @@ function FooterServicesList() {
                     <p className="text-sm ">
                         تضمین <span className="font-bold">کیفیت کالا</span>
                     </p>
-                    <p className="text-xs text-slate-500 af:hidden ">
+                    <p className="text-xs text-slate-500 af:hidden md:flex">
                         خرید بهترین کالای موجود
                     </p>
                 </div>
@@ -59,7 +59,7 @@ function FooterServicesList() {
                         پرداخت امن از{" "}
                         <span className="font-bold">درگاه بانکی</span>
                     </p>
-                    <p className="md:text-xs md:text-slate-500 af:hidden ">امنیت خرید آنلاین</p>
+                    <p className="md:text-xs md:text-slate-500 af:hidden md:flex">امنیت خرید آنلاین</p>
                 </div>
             </div>
         </div>
