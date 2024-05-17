@@ -16,7 +16,7 @@ const Pagination = ({ setPageNumber, pageNumber }) => {
     };
 
     return (
-        <div className="container mb-20 w-full flex flex-row gap-5 items-center justify-center">
+        <div className="af:hidden container mb-20 w-full as:flex flex-row gap-5 items-center justify-center">
             <button
                 onClick={nexPageHandler}
                 className="w-32 h-8 bg-white rounded-lg text-black cardOfferShadow font-bold primaryTransition hover:scale-105"
