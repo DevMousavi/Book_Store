@@ -3,7 +3,7 @@ import { FaPhone } from "react-icons/fa6";
 
 function FooterContainer() {
     return (
-        <div className="flex af:flex-wrap af:justify-center af:my-6 justify-between md:m-12 md:container ">
+        <div className="af:hidden as:flex af:flex-wrap af:justify-center af:my-6 justify-between md:m-12 md:container ">
             <div className="flex af:flex-wrap af:justify-around">
                 <div className="mx-4 af:my-5 md:my-0">
                     <p className="md:text-base af:text-sm mb-5 primaryTransition hover:scale-105 cursor-default">

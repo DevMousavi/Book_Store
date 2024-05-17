@@ -17,6 +17,10 @@ import Footer from "../LayOut/Footer.jsx";
 const Home = () => {
     return (
         <>
+            <h6 className="af:flex as:hidden w-full bg-primaryGreen text-2xl space-4 p-3 font-bold">
+                این سایت در اندازه دستگاه شما قابل مشاهده نیست لطفا با دستگاه
+                دیگری امتحان کنید
+            </h6>
             <Header />
             <main className="as:w-80% as:mx-auto md:container as:mt-0 md:mt-6">
                 <img
@@ -116,7 +120,7 @@ const Home = () => {
                 <img
                     src="./../src/assets/banner.jpg"
                     alt="last-banner"
-                    className="rounded-3xl cursor-pointer my-6"
+                    className="af:hidden sm:flex rounded-3xl cursor-pointer my-6"
                 />
             </main>
             <Footer />
