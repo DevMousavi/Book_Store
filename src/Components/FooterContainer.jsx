@@ -3,66 +3,66 @@ import { FaPhone } from "react-icons/fa6";
 
 function FooterContainer() {
     return (
-        <div className="flex justify-between m-12 container mx-auto ">
-            <div className="flex ">
-                <div className="mx-4">
-                    <p className="text-base mb-5 primaryTransition hover:scale-105 cursor-default">
+        <div className="flex af:flex-wrap af:justify-center af:my-6 justify-between md:m-12 md:container ">
+            <div className="flex af:flex-wrap af:justify-around">
+                <div className="mx-4 af:my-5 md:my-0">
+                    <p className="md:text-base af:text-sm mb-5 primaryTransition hover:scale-105 cursor-default">
                         <span className="font-bold">راهنمای </span>خرید
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
                         چگونگی ثبت سفارش
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
                         چگونگی خرید کالا
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105 ">
                         چگونکی پرداخت
                     </p>
                 </div>
-                <div className="mx-4">
-                    <p className="text-base mb-5 primaryTransition hover:scale-105 cursor-default">
+                <div className="mx-4 af:my-5 md:my-0">
+                    <p className="md:text-base af:text-sm mb-5 primaryTransition hover:scale-105 cursor-default">
                         <span className="font-bold">خدمات </span>مشتریان
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی ثبت سفارش
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی خرید کالا
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونکی پرداخت
                     </p>
                 </div>
-                <div className="mx-4">
-                    <p className="text-base mb-5 primaryTransition hover:scale-105 cursor-default">
+                <div className="mx-4 af:my-5 md:my-0">
+                    <p className="md:text-base af:text-sm mb-5 primaryTransition hover:scale-105 cursor-default">
                         <span className="font-bold">مجموعه </span>فروشگاه
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی ثبت سفارش
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی خرید کالا
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونکی پرداخت
                     </p>
                 </div>
-                <div className="mx-4">
-                    <p className="text-base mb-5 primaryTransition hover:scale-105 cursor-default">
+                <div className="mx-4 af:my-5 md:my-0">
+                    <p className="md:text-base af:text-sm mb-5 primaryTransition hover:scale-105 cursor-default">
                         <span className="font-bold">نقشه ی </span>فروشگاه
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی ثبت سفارش
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونگی خرید کالا
                     </p>
-                    <p className="mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
+                    <p className="md:text-sm af:text-xs mt-3 cursor-pointer text-neutral-800 primaryTransition hover:scale-105">
                         چگونکی پرداخت
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center af:my-6 md:my-0">
                 <div className="bg-primaryGreen rounded-xl p-2 text-white mb-3 primaryTransition hover:scale-105 cursor-pointer">
                     <p>
                         کارشناسان ما{" "}
