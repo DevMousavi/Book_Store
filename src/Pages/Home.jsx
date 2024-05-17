@@ -22,9 +22,9 @@ const Home = () => {
                 <img
                     src="./../src/assets/baner_1.png"
                     alt="baner_1.png"
-                    className="as:mb-1 my-2 as:h-20 as:hidden sm:flex"
+                    className=" as:mb-1 my-2 as:h-20 af:hidden sm:flex as:mx-auto"
                 />
-                <div className="w-full flex flex-row md:gap-2 md:my-8 items-center justify-between as:px-2 sm:my-6 lg:my-20 md:mx-0 as:h-64">
+                <div className="af:hidden w-full as:flex flex-row md:gap-2 md:my-8 items-center justify-between as:px-2 sm:my-6 lg:my-20 md:mx-0 as:h-64">
                     <div className="as:w-full md:w-[80%] cursor-pointer cardOfferShadow rounded-2xl">
                         <Swiper spaceBetween={50} slidesPerView={1}>
                             <SwiperSlide>
