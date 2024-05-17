@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CategoryBox from "../Components/CategoryBox.jsx";
 import { Link } from "react-router-dom";
 import LogoSRC from "./../assets/Logo.png";
+import CancelICON from "./../assets/Cancel_Icon.png";
 
 import { CiSearch } from "react-icons/ci";
 import { FaStar, FaUser } from "react-icons/fa6";
@@ -10,12 +11,15 @@ import { api } from "../server/config.js";
 import { FaBars } from "react-icons/fa";
 
 import { useCart } from "../context/CartContext.jsx";
+import CategoryBoxBar from "../Components/CategoryBoxBar.jsx";
 
 const Header = () => {
+    const [bar, setBar] = useState(false);
     const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const [valueInput, setValueInput] = useState("");
     const [hiddenBox, setHiddenBox] = useState(true);
+
+    console.log(bar);
 
     const searchHandler = (event) => {
         if (event.key === "Enter") setValueInput(event.target.value);
@@ -140,7 +144,10 @@ const Header = () => {
                             className="w-[40%] mx-auto"
                         />
                     </Link>
-                    <FaBars className="w-5 h-5" />
+                    <FaBars
+                        onClick={() => setBar(true)}
+                        className="w-5 h-5 hover:rotate-[540deg] primaryTransition"
+                    />
                 </div>
             </header>
             <div className="af:hidden as:flex as:flex-row md:hidden bg-slate-100 py-2 headerShadow z-50 h-16 as:items-center as:justify-between mt-5 px-4 sticky top-0">
@@ -163,6 +170,30 @@ const Header = () => {
                         {state.itemsCount}
                     </p>
                 </Link>
+            </div>
+            <div
+                className={`w-full bg-white z-50 fixed top-0 ${
+                    bar ? "flex flex-col" : "hidden"
+                }`}
+            >
+                <span className="flex w-full flex-row items-center justify-between bg-green-500 px-4 py-3">
+                    <Link to="/">
+                        <img
+                            src={LogoSRC}
+                            alt="logo.png"
+                            className="w-10 hover:scale-105 primaryTransition "
+                        />
+                    </Link>
+                    <img
+                        src={CancelICON}
+                        alt="Cancel_Icon.png"
+                        className="w-7 primaryTransition hover:rotate-[540deg] rounded-full"
+                        onClick={() => setBar(false)}
+                    />
+                </span>
+                <div>
+                    <CategoryBoxBar />
+                </div>
             </div>
         </>
     );
