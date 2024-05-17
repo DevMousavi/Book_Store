@@ -4,7 +4,6 @@ import useFetchData from "../Hooks/useFetchData.js";
 import Header from "../LayOut/Header.jsx";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { ImTruck } from "react-icons/im";
-// import { checkKeyInObject } from "../Helpers/checkKeyInObject.js";
 import { checkKeyInObject } from "../helpers/checkKeyInObject.js";
 import { IoIosCheckmark } from "react-icons/io";
 import { LuShoppingBasket } from "react-icons/lu";
@@ -12,7 +11,6 @@ import { FaStar } from "react-icons/fa6";
 import { MdFactory } from "react-icons/md";
 import Footer from "../LayOut/Footer.jsx";
 
-// import { useCart } from "../Context/CartContext.jsx";
 import { useCart } from "../context/CartContext.jsx";
 import Loader from "../Components/Loader/Loader.jsx";
 
@@ -23,69 +21,70 @@ const AboutProductPage = () => {
         `${params.category}?id=${params.id}`
     );
 
-    const [state, dispatch] = useCart();
-
     const addHandler = (type) => {
         dispatch({ type: type, payload: data[0] });
     };
+
     return (
         <>
             <Header />
-            <main className="container bg-slate-100 flex flex-row justify-between my-10">
+            <main className="af:hidden container bg-slate-100 as:flex as:gap-y-5 lg:gap-y-0 as:flex-col lg:flex-row justify-between my-10">
                 {isLoading ? (
                     <div className="w-full h-96 flex items-center justify-center">
                         <Loader />
                     </div>
                 ) : (
                     <>
-                        <div className="cardOfferShadow  bg-white rounded-xl w-[25%] h-[470px] flex flex-col px-4 py-6">
+                        <div className="cardOfferShadow  bg-white rounded-xl as:w-full lg:w-[25%] sm:h-80 lg:h-[450px] xl:h-[500px] flex as:flex-col sm:flex-row lg:flex-col px-4 py-6">
                             <img
                                 src={data[0].image}
                                 alt={`${data[0].name}.png`}
-                                className="w-full"
+                                className="as:w-40 as:mx-auto sm:w-[35%] lg:w-full"
                             />
-                            <span className="flex flex-row gap-1 items-center my-3">
-                                <span className="flex flex-row-reverse items-center gap-2">
-                                    <p className="font-bold">فروشنده:</p>
-                                    <IoStorefrontSharp className="w-6 h-6 text-primaryGreen" />
+                            <div className="flex sm:justify-around flex-col as:w-full sm:w-[50%] md:w-full">
+                                <span className="flex flex-row  gap-1 items-center my-3">
+                                    <span className="flex flex-row-reverse items-center gap-2">
+                                        <p className="font-bold">فروشنده:</p>
+                                        <IoStorefrontSharp className="w-6 h-6 text-primaryGreen" />
+                                    </span>
+                                    <p className="text-gray-600">
+                                        {data[0].specifications.seller}
+                                    </p>
                                 </span>
-                                <p className="text-gray-600">
-                                    {data[0].specifications.seller}
-                                </p>
-                            </span>
-                            <span className="flex flex-row gap-2 items-center">
-                                <ImTruck className="w-6 h-6 text-primaryGreen" />
-                                <p>آماده ارسال</p>
-                                <IoIosCheckmark className="w-7 h-7 text-primaryPink" />
-                            </span>
-                            <div className="flex flex-row items-center justify-between">
-                                <span className="flex flex-row justify-center items-center gap-1">
-                                    {checkKeyInObject(
-                                        data[0],
-                                        "final_price"
-                                    ) ? (
-                                        <p className="font-bold">
-                                            {data[0].final_price}
-                                        </p>
-                                    ) : (
-                                        <p className="font-bold">
-                                            {data[0].price}
-                                        </p>
-                                    )}
-                                    <p className="text-gray-600">تومان</p>
+                                <span className="flex flex-row gap-2 items-center">
+                                    <ImTruck className="w-6 h-6 text-primaryGreen" />
+                                    <p>آماده ارسال</p>
+                                    <IoIosCheckmark className="w-7 h-7 text-primaryPink" />
                                 </span>
-                                <Link
-                                    to="/cart"
-                                    onClick={() => addHandler("ADD")}
-                                    className="bg-primaryPink text-base text-white w-[59%] cardOfferShadow h-11 flex justify-center gap-1 items-center rounded-lg primaryTransition hover:scale-105 hover:bg-primaryGreen "
-                                >
-                                    <p>افزون به سبد خرید</p>
-                                    <LuShoppingBasket />
-                                </Link>
+                                <div className="flex as:flex-col as:gap-3 as:items-start mt-4 items-center justify-between">
+                                    <span className="flex flex-row justify-center items-center gap-1">
+                                        {checkKeyInObject(
+                                            data[0],
+                                            "final_price"
+                                        ) ? (
+                                            <p className="font-bold">
+                                                {data[0].final_price}
+                                            </p>
+                                        ) : (
+                                            <p className="font-bold">
+                                                {data[0].price}
+                                            </p>
+                                        )}
+                                        <p className="text-gray-600">تومان</p>
+                                    </span>
+                                    <Link
+                                        to="/cart"
+                                        onClick={() => addHandler("ADD")}
+                                        className="bg-primaryPink text-base text-white as:w-full md:w-[50%] lg:w-[70%] cardOfferShadow h-11 flex justify-center gap-1 items-center rounded-lg primaryTransition hover:scale-105 hover:bg-primaryGreen "
+                                    >
+                                        <p>افزون به سبد خرید</p>
+                                        <LuShoppingBasket />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                        <div className="rounded-lg bg-white cardOfferShadow py-5 px-10 w-[73%] flex flex-col">
-                            <h1 className="text-3xl font-bold">
+                        <div className="rounded-lg bg-white cardOfferShadow py-5 px-10 as:w-full lg:w-[73%] flex flex-col">
+                            <h1 className="as:text-xl text-nowrap sm:text-3xl font-bold">
                                 {data[0].name}
                             </h1>
                             <div className="my-2 flex items-center justify-between pb-1 border-b-[1px] border-primaryGreen">
