@@ -140,7 +140,7 @@ const Header = () => {
                             className="w-[40%] mx-auto"
                         />
                     </Link>
-                    <FaBars className="w-5 h-5" />
+                    <FaBars className="w-5 h-5 hover:rotate-[540deg] primaryTransition" />
                 </div>
             </header>
             <div className="af:hidden as:flex as:flex-row md:hidden bg-slate-100 py-2 headerShadow z-50 h-16 as:items-center as:justify-between mt-5 px-4 sticky top-0">
