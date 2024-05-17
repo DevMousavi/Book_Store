@@ -18,7 +18,7 @@ const CategoryBoxBar = () => {
                     <li className="hover:bg-green-200 primaryTransitions rounded-2xl px-2">
                         <NavLink
                             to="/offers"
-                            className="flex justify-between items-center py-1 text-red-700 font-bold rounded-lg primaryTransition"
+                            className="flex justify-between items-center py-1 text-red-700 font-bold rounded-lg primaryTransition primaryTransition"
                         >
                             <span className="flex flex-row gap-3 items-center">
                                 <TbPointFilled />

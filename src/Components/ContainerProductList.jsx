@@ -49,28 +49,30 @@ const ContainerProductList = ({ url, pageNumber, category, reset }) => {
     }, [pageNumber, data]);
 
     return (
-        <div className="w-full cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
-            {isLoading ? (
-                <div className="w-full h-96 flex items-center justify-center">
-                    <Loader />
-                </div>
-            ) : (
-                filteredData
-                    .slice(number1, number2)
-                    .map((item) => (
-                        <Card
-                            key={item.id}
-                            id={item.id}
-                            name={item.name}
-                            img={item.image}
-                            price={item.price}
-                            score={item.specifications.score}
-                            discount={item.discount}
-                            category={item.category}
-                        />
-                    ))
-            )}
-        </div>
+        <>
+            <div className="w-full cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center as:justify-around  md:justify-around xl:justify-between gap-x-2 gap-y-10">
+                {isLoading ? (
+                    <div className="w-full h-96 flex items-center justify-center">
+                        <Loader />
+                    </div>
+                ) : (
+                    filteredData
+                        .slice(number1, number2)
+                        .map((item) => (
+                            <Card
+                                key={item.id}
+                                id={item.id}
+                                name={item.name}
+                                img={item.image}
+                                price={item.price}
+                                score={item.specifications.score}
+                                discount={item.discount}
+                                category={item.category}
+                            />
+                        ))
+                )}
+            </div>
+        </>
     );
 };
 
