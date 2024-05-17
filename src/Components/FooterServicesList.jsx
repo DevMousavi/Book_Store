@@ -5,7 +5,7 @@ import Headphones from "./../assets/footer/headphones.png";
 function FooterServicesList() {
     return (
         <div className="flex md:justify-between af:justify-around af:flex-wrap border-slate-300 border-b pb-5 bg-gray-200 md:px-64 py-6 cursor-default">
-            <div className="flex items-center">
+            <div className="flex items-center af:my-5 md:my-0 af:shadow-md md:shadow-none af:p-3 md:p-0">
                 <img
                     src={Headphones}
                     alt="footer-icon"
@@ -18,7 +18,7 @@ function FooterServicesList() {
                     <p className="md:flex text-xs text-slate-500 af:hidden">تماس با 0214400</p>
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center af:my-5 md:my-0 af:shadow-md md:shadow-none af:p-3 md:p-0">
                 <img
                     src={Package}
                     alt="footer-icon"
@@ -33,7 +33,7 @@ function FooterServicesList() {
                     </p>
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center af:my-5 md:my-0 af:shadow-md md:shadow-none af:p-3 md:p-0">
                 <img
                     src={Package}
                     alt="footer-icon"
@@ -48,7 +48,7 @@ function FooterServicesList() {
                     </p>
                 </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center af:my-5 md:my-0 af:shadow-md md:shadow-none af:p-3 md:p-0">
                 <img
                     src={Package}
                     alt="footer-icon"
