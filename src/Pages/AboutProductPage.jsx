@@ -21,6 +21,7 @@ const AboutProductPage = () => {
         `${params.category}?id=${params.id}`
     );
 
+    const [state,dispatch] = useCart();
     const addHandler = (type) => {
         dispatch({ type: type, payload: data[0] });
     };
