@@ -4,8 +4,8 @@ import { separateDigits } from "../../helpers/separateDigits";
 
 function BasketSideBar({ state, clickHandler }) {
     return (
-        <div>
-            <div className="bg-white pt-24 px-8 pb-8 relative min-w-72 min-h-80 rounded-3xl mb-4 shadow-md">
+        <div className="lg:w-72 af:w-full">
+            <div className="bg-white pt-24 px-8 pb-8 relative min-h-80 rounded-3xl mb-4 shadow-md">
                 <div className="absolute top-0 right-[123px]">
                     <img
                         src="./../src/assets/shop.png"

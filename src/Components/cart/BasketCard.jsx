@@ -4,7 +4,7 @@ import { FaTrash } from "react-icons/fa";
 
 function BasketCard({ data, clickHandler }) {
   return (
-    <div className="flex justify-between border-dotted border-slate-200 shadow-sm border rounded-xl py-5 px-8 my-3">
+    <div className="flex af:flex-col lg:flex-row justify-between border-dotted border-slate-200 shadow-sm border rounded-xl py-5 px-8 my-3">
       <div className="flex">
         <img src={data.image} alt={data.name} width="120" height="120" />
         <div className="flex flex-col justify-around">
@@ -12,7 +12,7 @@ function BasketCard({ data, clickHandler }) {
           <p>{data.final_price} تومان</p>
         </div>
       </div>
-      <div className="flex flex-col justify-between items-end">
+      <div className="flex af:flex-row-reverse af:items-center lg:flex-col justify-between lg:items-end af:my-4 lg:my-0">
         <FaTrash onClick={()=>clickHandler("DELETE",data)} className="cursor-pointer ml-2"/>
         <div>
           <button onClick={()=>clickHandler("INCREASE",data)} className="w-10 mx-3 text-lg font-bold shadow-md rounded-md">+</button>
