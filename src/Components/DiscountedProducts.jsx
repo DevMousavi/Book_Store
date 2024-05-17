@@ -57,7 +57,7 @@ const DiscountedProducts = () => {
                             <Loader />
                         </div>
                     ) : (
-                        <div className="flex flex-row flex-wrap items-center sm:justify-around xl:justify-between gap-y-5">
+                        <div className="flex flex-row flex-wrap items-center sm:h-[900px] lg:h-[360px] sm:mt-7  xl:w-full sm:justify-around xl:justify-between gap-y-5">
                             {data.slice(0, 4).map((item) => (
                                 <CardOffers
                                     key={item.id}
