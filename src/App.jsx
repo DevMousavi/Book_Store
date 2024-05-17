@@ -8,12 +8,10 @@ import EducationalProductsPage from "./Pages/EducationalProductsPage.jsx";
 import EnglishProductsPage from "./Pages/EnglishProductsPage.jsx";
 import KidsAndTeensProductsPage from "./Pages/KidsAndTeensProductsPage.jsx";
 import OfferProductsPage from "./Pages/OfferProductsPage.jsx";
-import Login from "./Pages/Authentication/Login.jsx";
 import Cart from "./Pages/Cart.jsx";
 import AboutProductPage from "./Pages/AboutProductPage.jsx";
 import AuthPage from "./Pages/Authentication/AuthPage.jsx";
 import StationeryPage from "./Pages/StationeryPage.jsx";
-// import CartProvider from "./Context/CartContext.jsx";
 import CartProvider from "./context/CartContext.jsx";
 
 const App = () => {
