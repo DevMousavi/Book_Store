@@ -13,7 +13,7 @@ const EducationalProductsPage = () => {
     return (
         <>
             <Header />
-            <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
+            <main className="af:hidden as:w-full as:flex-col lg:flex-row lg:gap-3 md:container justify-between my-12 py-4 px-7 as:flex flex-row">
                 <FilterBox
                     setCategory={setCategory}
                     setReset={setReset}
