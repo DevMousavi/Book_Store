@@ -106,8 +106,10 @@ const AboutProductPage = () => {
                             </div>
                             <div className="flex flex-row items-center gap-2">
                                 <MdFactory className="w-6 h-6 text-primaryGreen" />
-                                <h5 className="my-3 font-bold">تولید کننده:</h5>
-                                <h4 className="text-gray-600">
+                                <h5 className="my-3 font-bold text-nowrap">
+                                    تولید کننده:
+                                </h5>
+                                <h4 className="text-gray-600 text-nowrap">
                                     {data[0].specifications.producer}
                                 </h4>
                             </div>
@@ -140,9 +142,9 @@ const AboutProductPage = () => {
                                         </p>
                                     </span>
                                 </div>
-                                <div className="mt-6 font-bold text-xl flex flex-col">
+                                <div className="as:w-56 sm:w-[560px] md:w-[690px] lg:w-[670px] xl:w-[820px] mt-6 font-bold text-xl flex flex-col">
                                     <h6>توضیحات:</h6>
-                                    <p className="mt-2 text-base text-gray-600">
+                                    <p className="mt-2 text-base text-gray-600 w-full">
                                         {data[0].description}
                                     </p>
                                 </div>
