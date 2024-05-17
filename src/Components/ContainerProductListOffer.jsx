@@ -29,29 +29,31 @@ const ContainerProductListOffer = ({ url, pageNumber }) => {
     }, [pageNumber]);
 
     return (
-        <div className="w-full cardOfferShadow p-5 rounded-2xl bg-white flex flex-wrap items-center justify-between gap-x-2 gap-y-10">
-            {isLoading ? (
-                <div className="w-full h-72 flex items-center justify-center">
-                    <Loader />
-                </div>
-            ) : (
-                data
-                    .slice(number1, number2)
-                    .map((item) => (
-                        <CardOffers
-                            key={item.id}
-                            id={item.id}
-                            name={item.name}
-                            img={item.image}
-                            first_price={item.initial_price}
-                            second_price={item.final_price}
-                            score={item.specifications.score}
-                            discount={item.discount}
-                            category={item.category}
-                        />
-                    ))
-            )}
-        </div>
+        <>
+            <main className="af:hidden as:flex cardOfferShadow p-5 rounded-2xl bg-white flex-wrap items-center justify-between gap-x-2 gap-y-10">
+                {isLoading ? (
+                    <div className="w-full h-72 flex items-center justify-center">
+                        <Loader />
+                    </div>
+                ) : (
+                    data
+                        .slice(number1, number2)
+                        .map((item) => (
+                            <CardOffers
+                                key={item.id}
+                                id={item.id}
+                                name={item.name}
+                                img={item.image}
+                                first_price={item.initial_price}
+                                second_price={item.final_price}
+                                score={item.specifications.score}
+                                discount={item.discount}
+                                category={item.category}
+                            />
+                        ))
+                )}
+            </main>
+        </>
     );
 };
 

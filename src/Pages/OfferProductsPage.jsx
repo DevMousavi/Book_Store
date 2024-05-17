@@ -10,7 +10,7 @@ const OfferProductsPage = () => {
     return (
         <>
             <Header />
-            <main className="container w-full justify-between my-12 py-4 px-7 flex flex-row">
+            <main className="md:container justify-between my-12 py-4 px-7 flex flex-row">
                 <ContainerProductListOffer
                     url="/offer"
                     pageNumber={pageNumber}
