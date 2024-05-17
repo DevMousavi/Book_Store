@@ -52,7 +52,7 @@ const Home = () => {
                     </div>
                 </div>
                 <DiscountedProducts />
-                <h2 className="text-3xl text-primaryGreen mt-14">
+                <h2 className="af:hidden as:flex as:text-xl as:font-bold sm:text-2xl md:text-3xl text-black mt-14 as:mr-3 md:mr-0">
                     همکاری ها ...
                 </h2>
                 <PartnerBrandsBox />
