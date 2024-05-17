@@ -51,7 +51,7 @@ const DiscountedProducts = () => {
                         ))
                     )}
                 </Swiper>
-                <div className="af:hidden sm:flex flex-col bg-yellow-200">
+                <div className="af:hidden sm:flex flex-co">
                     {isLoading ? (
                         <div className="w-full h-72 flex items-center justify-center">
                             <Loader />
