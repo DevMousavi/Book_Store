@@ -155,9 +155,9 @@ const Header = () => {
                 </div>
                 <Link
                     to="/cart"
-                    className="flex flex-row gap-2  w-[10%] h-full items-center justify-center border border-solid  border-black rounded-2xl  hover:scale-105 primaryTransition relative"
+                    className="flex flex-row gap-2 as:w-10 sm:w-[10%] h-full items-center justify-center border border-solid  border-black rounded-2xl  hover:scale-105 primaryTransition relative"
                 >
-                    <IoMdCart className="w-6 h-6 " />
+                    <IoMdCart className=" w-6 h-6 " />
 
                     <p className="px-1 py-0 flex items-center justify-center rounded-lg priceShadow text-sm bg-primaryPink text-white absolute bottom-0 right-0  ">
                         {state.itemsCount}

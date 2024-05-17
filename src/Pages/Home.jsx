@@ -18,14 +18,14 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main className=" container mt-6">
+            <main className="as:w-80% as:mx-auto md:container as:mt-0 md:mt-6">
                 <img
                     src="./../src/assets/baner_1.png"
                     alt="baner_1.png"
-                    className="my-2 "
+                    className="as:mb-1 my-2 as:h-20 as:hidden sm:flex"
                 />
-                <div className="w-full flex items-center justify-between">
-                    <div className="w-[70%] cursor-pointer cardOfferShadow rounded-2xl">
+                <div className="w-full flex flex-row md:gap-2 md:my-8 items-center justify-between as:px-2 sm:my-6 lg:my-20 md:mx-0 as:h-64">
+                    <div className="as:w-full md:w-[80%] cursor-pointer cardOfferShadow rounded-2xl">
                         <Swiper spaceBetween={50} slidesPerView={1}>
                             <SwiperSlide>
                                 <img
@@ -43,11 +43,11 @@ const Home = () => {
                             </SwiperSlide>
                         </Swiper>
                     </div>
-                    <div className="w-[25%] h-[350px] rounded-2xl ">
+                    <div className="w-[25%] h-[350px] rounded-2xl as:hidden md:flex md:h-[95%] lg:h-80 xl:h-[400px]">
                         <img
                             src="./../src/assets/baner_2.png"
                             alt="baner_2.png"
-                            className="w-full h-full rounded-2xl"
+                            className="w-full h-full rounded-2xl "
                         />
                     </div>
                 </div>
