@@ -8,7 +8,7 @@ function BasketSideBar({ state, clickHandler }) {
             <div className="bg-white pt-24 px-8 pb-8 relative min-h-80 rounded-3xl mb-4 shadow-md">
                 <div className="absolute top-[2%] left-[50%]">
                     <img
-                        src="./../src/assets/shop.png"
+                        src={process.env.PUBLIC_URL + "/assets/shop.png"}
                         alt="cart-logo"
                         width="50"
                         height="50"

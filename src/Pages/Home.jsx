@@ -16,7 +16,8 @@ import Footer from "../LayOut/Footer.jsx";
 
 // Banners...
 import b_1 from "./../assets/Slider/3.jpg";
-import b_2 from "./../assets/topBanner.png";
+import topBanner from "./../assets/topBanner.png";
+import b_2 from "./../assets/baner_2.png";
 import b_4 from "./../assets/Slider/4.jpg";
 import bb from "./../assets/b-1.png";
 import bbb from "./../assets/b-2.png";
@@ -33,7 +34,7 @@ const Home = () => {
             <Header />
             <main className="as:w-80% as:mx-auto md:container as:mt-0 md:mt-6">
                 <img
-                    src="./../src/assets/baner_1.png"
+                    src={topBanner}
                     alt="baner_1.png"
                     className=" as:mb-1 my-2 as:h-20 af:hidden sm:flex as:mx-auto"
                 />

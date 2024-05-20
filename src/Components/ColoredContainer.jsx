@@ -32,10 +32,7 @@ export const ColoredContainer = ({ url, title, link, bg_color, img_title }) => {
             >
                 <div className="lg:absolute xl:flex af:hidden flex-col-reverse bottom-[-18px] right-16 max-w-52 ">
                     <img
-                        src={
-                            process.env.PUBLIC_URL +
-                            `/assets/colored-container/${img_title}.png`
-                        }
+                        src={`${process.env.PUBLIC_URL}/assets/colored-container/${img_title}.png`}
                         alt={img_title}
                     />
                 </div>
