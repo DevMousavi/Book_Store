@@ -16,11 +16,12 @@ import Footer from "../LayOut/Footer.jsx";
 
 // Banners...
 import b_1 from "./../assets/Slider/3.jpg";
-import b_2 from "./../assets/baner_2.png";
+import b_2 from "./../assets/topBanner.png";
 import b_4 from "./../assets/Slider/4.jpg";
 import bb from "./../assets/b-1.png";
 import bbb from "./../assets/b-2.png";
 import bbbb from "./../assets/b-3.png";
+import BannerDown from "./../assets/BannerDown.jpg";
 
 const Home = () => {
     return (
@@ -126,7 +127,7 @@ const Home = () => {
                     img_title="stationery"
                 />
                 <img
-                    src="./../src/assets/banner.jpg"
+                    src={BannerDown}
                     alt="last-banner"
                     className="af:hidden sm:flex rounded-3xl cursor-pointer my-6"
                 />
