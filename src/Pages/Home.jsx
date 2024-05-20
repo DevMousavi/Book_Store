@@ -14,6 +14,14 @@ import ColoredContainer from "../Components/ColoredContainer.jsx";
 import MiddleBanners from "../Components/MiddleBanners.jsx";
 import Footer from "../LayOut/Footer.jsx";
 
+// Banners...
+import b_1 from "./../assets/Slider/3.jpg";
+import b_2 from "./../assets/baner_2.png";
+import b_4 from "./../assets/Slider/4.jpg";
+import bb from "./../assets/b-1.png";
+import bbb from "./../assets/b-2.png";
+import bbbb from "./../assets/b-3.png";
+
 const Home = () => {
     return (
         <>
@@ -33,14 +41,14 @@ const Home = () => {
                         <Swiper spaceBetween={50} slidesPerView={1}>
                             <SwiperSlide>
                                 <img
-                                    src="./../src/assets/Slider/3.jpg"
+                                    src={b_1}
                                     alt="baner_1.jpg"
                                     className="w-full rounded-2xl"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img
-                                    src="./../src/assets/Slider/4.jpg"
+                                    src={b_4}
                                     alt="baner_1.jpg"
                                     className="w-full rounded-2xl"
                                 />
@@ -49,7 +57,7 @@ const Home = () => {
                     </div>
                     <div className="w-[25%] h-[350px] rounded-2xl as:hidden md:flex md:h-[95%] lg:h-80 xl:h-[400px]">
                         <img
-                            src="./../src/assets/baner_2.png"
+                            src={b_2}
                             alt="baner_2.png"
                             className="w-full h-full rounded-2xl "
                         />
@@ -80,18 +88,18 @@ const Home = () => {
 
                 <div className="af:hidden as:w-[95%] as:mx-auto as:flex flex-col gap-1 mb-9">
                     <img
-                        src="./../src/assets/b-1.png"
+                        src={bb}
                         alt="b-1.png"
                         className="w-full cardOfferShadow rounded-xl"
                     />
                     <div className="flex flex-row w-full justify-between items-center">
                         <img
-                            src="./../src/assets/b-2.png"
+                            src={bbb}
                             alt="b-2.png"
                             className="rounded-2xl cardOfferShadow as:hidden lg:flex lg:w-[290px] "
                         />
                         <img
-                            src="./../src/assets/b-3.png"
+                            src={bbbb}
                             alt="b-3.png"
                             className="rounded-2xl cardOfferShadow lg:w-[650px] lg:h-72 xl:w-full"
                         />
