@@ -2,17 +2,14 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { separateDigits } from "../../helpers/separateDigits";
 
+import shopImg from "./../../assets/shop.png";
+
 function BasketSideBar({ state, clickHandler }) {
     return (
         <div className="lg:flex-grow-0 lg:min-w-72 af:grow af:mx-5 lg:mx-0">
             <div className="bg-white pt-24 px-8 pb-8 relative min-h-80 rounded-3xl mb-4 shadow-md">
                 <div className="absolute top-[2%] left-[50%]">
-                    <img
-                        src={process.env.PUBLIC_URL + "/assets/shop.png"}
-                        alt="cart-logo"
-                        width="50"
-                        height="50"
-                    />
+                    <img src={shopImg} alt="cart-logo" width="50" height="50" />
                 </div>
                 <div className="flex justify-evenly mt-2">
                     <p>تعداد کالاها : </p>

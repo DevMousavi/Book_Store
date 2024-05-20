@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Logo from "./../../assets/Logo.png";
 
 function AuthPage() {
     const [flag, setFlag] = useState(true);
@@ -31,10 +32,7 @@ function AuthPage() {
                     to="/"
                     className="hover:scale-105 primaryTransition bg-slate-200 shadow-xl rounded-full "
                 >
-                    <img
-                        src={process.env.PUBLIC_URL + "/assets/Logo.png"}
-                        alt="Logo.png"
-                    />
+                    <img src={Logo} alt="Logo.png" />
                 </Link>
             </header>
             <div className="flex justify-center max-h-full max-w-full">

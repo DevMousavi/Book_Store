@@ -19,8 +19,6 @@ const Header = () => {
     const [valueInput, setValueInput] = useState("");
     const [hiddenBox, setHiddenBox] = useState(true);
 
-    console.log(bar);
-
     const searchHandler = (event) => {
         if (event.key === "Enter") setValueInput(event.target.value);
         if (event.key === "Enter") setHiddenBox(false);
