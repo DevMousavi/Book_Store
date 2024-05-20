@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Home from "./Pages/Home.jsx";
 import ErrorHandler from "./Pages/ErrorHandler.jsx";
 import AdultsProductsPage from "./Pages/AdultsProductsPage.jsx";
